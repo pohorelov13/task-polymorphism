@@ -1,6 +1,6 @@
 package geometry;
 
-public class Circle extends Figure{
+public class Circle extends Figure {
     public Circle(String name, int side, int height) {
         super(name, side, height);
     }

@@ -1,6 +1,6 @@
 package geometry;
 
-public class Square extends Figure{
+public class Square extends Figure {
 
     protected Square(String name, int side, int height) {
         super(name, side, height);

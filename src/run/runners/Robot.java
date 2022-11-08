@@ -1,7 +1,7 @@
 package run.runners;
 
 public class Robot extends Runner {
-
+    private int total;
 
     public Robot(String name, int runDistance, int jumpHeight) {
         super(name, runDistance, jumpHeight);
@@ -9,14 +9,16 @@ public class Robot extends Runner {
 
     @Override
     public void run() {
-        System.out.printf("\nI'm robot %s and i can run\n", super.getName());
+        total++;
+        System.out.printf("I'm robot %s and i can run\nOvercome %d obstacle\n\n",
+                super.getName(), total);
     }
 
     @Override
     public void jump() {
-        System.out.printf("\nI'm robot %s and i can jump\n", super.getName());
+        total++;
+        System.out.printf("I'm robot %s and i can jump\nOvercome %d obstacle\n\n",
+                super.getName(), total);
 
     }
 }
-
-

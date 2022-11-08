@@ -23,7 +23,6 @@ public abstract class Runner {
         return jumpHeight;
     }
 
-
     public abstract void run();
 
     public abstract void jump();
