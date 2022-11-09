@@ -1,16 +1,19 @@
 package geometry;
 
+import geometry.util.Rounder;
+
 public class Data {
 
     static Figure[] areas;
     static double totalSquare;
 
     static void handleData() {
-        Figure circle1 = new Circle("Circle", 12, 12);
-        Figure circle2 = new Circle("Circle2", 7, 7);
-        Figure square = new Square("Square", 15, 15);
-        Figure triangle = new Triangle("Triangle", 11, 16);
-        Figure triangle2 = new Triangle("Triangle2", 11, 5);
+        //створення об'єктів, масиву, виклик методів
+        Figure circle1 = new Circle("O", 12);
+        Figure circle2 = new Circle("O1", 7);
+        Figure square = new Square("ABCD", 15, 15);
+        Figure triangle = new Triangle("ABC", 15, 16);
+        Figure triangle2 = new Triangle("CDE", 11, 5);
 
         areas = new Figure[]{circle1, square, triangle, circle2, triangle2};
 
@@ -19,14 +22,16 @@ public class Data {
     }
 
     static void calcSumArea() {
+        //прохід по масиву фігур, сумується площа
         totalSquare = 0;
         for (Figure i : areas) {
-            i.setArea(i.calcArea(i.getWidth(), i.getHeight()));
             totalSquare += i.getArea();
         }
     }
 
     static void printInfo() {
-        System.out.print("The total area of all figures - " + totalSquare + " square centimeters");
+        //Метод виводить округлену загальну площу
+        System.out.println("The total area of all figures - " +
+                Rounder.roundValue(totalSquare) + " square centimeters");
     }
 }

@@ -1,13 +1,23 @@
 package geometry;
 
+//клас наслідує Фігуру
 public class Square extends Figure {
 
-    protected Square(String name, int side, int height) {
-        super(name, side, height);
+    private double sideA;
+    private double sideB;
+
+    //конструктор приймає ім'я та сторони квадрата
+    //після чого розраховує площу
+    public Square(String name, double sideA, double sideB) {
+        super(name);
+        this.sideA = sideA;
+        this.sideB = sideB;
+        calcArea();
     }
 
+    //формула розрахунку площі прямокутника: перемноження двох сторін
     @Override
-    double calcArea(int width, int height) {
-        return width * height;
+    public void calcArea() {
+        super.setArea(sideA * sideB);
     }
 }

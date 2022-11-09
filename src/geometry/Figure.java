@@ -2,11 +2,14 @@ package geometry;
 
 public abstract class Figure {
     private String name;
-    private int width;
-    private int height;
     private double area;
 
+    //в конструктор батьківського класу передається лише ім'я фігури
+    public Figure(String name) {
+        this.name = name;
+    }
 
+    //сеттери і геттери для приватних полів
     public void setArea(double area) {
         this.area = area;
     }
@@ -15,23 +18,9 @@ public abstract class Figure {
         return name;
     }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
     public double getArea() {
         return area;
     }
 
-    public Figure(String name, int width, int height) {
-        this.name = name;
-        this.width = width;
-        this.height = height;
-    }
-
-    abstract double calcArea(int width, int height);
+    abstract void calcArea();
 }
