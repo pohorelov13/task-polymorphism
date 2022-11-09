@@ -11,7 +11,7 @@ public class Data {
         //створення об'єктів, масиву, виклик методів
         Figure circle1 = new Circle("O", 12);
         Figure circle2 = new Circle("O1", 7);
-        Figure square = new Square("ABCD", 15, 15);
+        Figure square = new Square("ABCD", 15);
         Figure triangle = new Triangle("ABC", 15, 16);
         Figure triangle2 = new Triangle("CDE", 11, 5);
 
