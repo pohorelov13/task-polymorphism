@@ -5,7 +5,7 @@ public class Square extends Figure {
 
     private double side;
 
-    //конструктор приймає ім'я та сторони квадрата
+    //конструктор приймає ім'я та сторону квадрата
     //після чого розраховує площу
     public Square(String name, double side) {
         super(name);

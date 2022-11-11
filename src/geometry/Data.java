@@ -13,9 +13,10 @@ public class Data {
         Figure circle2 = new Circle("O1", 7);
         Figure square = new Square("ABCD", 15);
         Figure triangle = new Triangle("ABC", 15, 16);
-        Figure triangle2 = new Triangle("CDE", 11, 5);
+        Figure triangle2 = new Triangle("CDE", 10, 11,16.5 );
+        Figure triangle3 = new Triangle("COP", 11, 15, 60);
 
-        areas = new Figure[]{circle1, square, triangle, circle2, triangle2};
+        areas = new Figure[]{circle1, square, triangle, circle2, triangle2, triangle3};
 
         calcSumArea();
         printInfo();
